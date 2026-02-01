@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] overflow-hidden">
+    <section className="relative min-h-[500px] md:min-h-[560px] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -16,9 +16,9 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="max-w-2xl">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6">
             <span className="whitespace-nowrap">スタートアップ・中小企業の</span>
             <br />
             <span className="text-primary-600">「事業成長」</span>を支援する
