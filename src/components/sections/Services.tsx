@@ -60,21 +60,31 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="relative w-full h-40">
+              {/* Image with overlay */}
+              <div className="relative w-full h-44 overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                {/* Title on image */}
+                <div className="absolute bottom-3 left-4 right-4">
+                  <h3 className="text-lg font-bold text-white drop-shadow-lg">
+                    {service.title}
+                  </h3>
+                </div>
               </div>
-              <div className="p-5">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
+              {/* Description */}
+              <div className="p-4">
+                <div className="w-10 h-1 bg-primary-600 rounded mb-3" />
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             </div>
           ))}
