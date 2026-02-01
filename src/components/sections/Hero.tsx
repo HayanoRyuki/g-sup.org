@@ -1,70 +1,46 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full opacity-50 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-100 rounded-full opacity-50 blur-3xl" />
+    <section className="relative min-h-[600px] md:min-h-[700px] overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-bg.webp"
+          alt="Growth Supporters Alliance"
+          fill
+          className="object-cover object-center"
+          priority
+        />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              <span className="whitespace-nowrap">スタートアップ・中小企業の</span>
-              <br />
-              <span className="text-primary-600">「事業成長」</span>を支援する
-              <br />
-              専門家ネットワーク
-            </h1>
-            <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto lg:mx-0">
-              各分野の専門家が、あなたの事業課題に合わせた最適なソリューションを提供します。
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl"
-              >
-                今すぐ無料で相談する
-              </Link>
-              <Link
-                href="#services"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-primary-600 hover:bg-primary-50 font-medium rounded-lg transition-colors"
-              >
-                支援ジャンルを見る
-              </Link>
-            </div>
-          </div>
-
-          {/* Visual */}
-          <div className="hidden lg:block relative">
-            <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="flex justify-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
-                      <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                      </svg>
-                    </div>
-                    <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
-                      <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                    </div>
-                    <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
-                      <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <p className="text-primary-800 font-medium">専門家ネットワーク</p>
-                </div>
-              </div>
-            </div>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div className="max-w-2xl">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            <span className="whitespace-nowrap">スタートアップ・中小企業の</span>
+            <br />
+            <span className="text-primary-600">「事業成長」</span>を支援する
+            <br />
+            専門家ネットワーク
+          </h1>
+          <p className="text-gray-700 text-lg mb-8 max-w-xl">
+            各分野の専門家が、あなたの事業課題に合わせた最適なソリューションを提供します。
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl"
+            >
+              今すぐ無料で相談する
+            </Link>
+            <Link
+              href="#services"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-primary-600 hover:bg-primary-50 font-medium rounded-lg transition-colors bg-white/80 backdrop-blur-sm"
+            >
+              支援ジャンルを見る
+            </Link>
           </div>
         </div>
       </div>
