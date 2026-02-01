@@ -2,43 +2,43 @@ import Image from "next/image";
 
 const services = [
   {
-    title: "営業支援",
-    description: "セールススクリプト／営業資料／SFA活用",
+    title: "営業・セールス",
+    description: "AI商談分析／リードスコアリング／提案書自動生成",
     image: "/images/genre1.jpg",
   },
   {
-    title: "広報・PR",
-    description: "メディア対応、プレスリリース、採用広報",
+    title: "マーケティング",
+    description: "AIコンテンツ生成／広告最適化／パーソナライズ配信",
     image: "/images/genre2.jpg",
   },
   {
-    title: "ブランディング",
-    description: "理念・世界観・タグライン整理／CI再構築",
+    title: "カスタマーサポート",
+    description: "AIチャットボット／FAQ自動化／VOC分析",
     image: "/images/genre3.jpg",
   },
   {
-    title: "制作・クリエイティブ",
-    description: "サイト・資料・LPの刷新と改善",
+    title: "人事・採用",
+    description: "AI採用スクリーニング／1on1サポート／離職予測",
     image: "/images/genre4.jpg",
   },
   {
-    title: "Webマーケティング",
-    description: "集客設計／広告運用／SNS運用",
+    title: "経理・財務",
+    description: "AI経費精算／請求書処理自動化／予実管理",
     image: "/images/genre5.jpg",
   },
   {
-    title: "CRM／業務改善",
-    description: "顧客管理／業務フローの可視化と自動化",
+    title: "法務・総務",
+    description: "AI契約書レビュー／社内規程検索／議事録生成",
     image: "/images/genre6.jpg",
   },
   {
-    title: "人材・組織設計",
-    description: "採用設計／組織体制／育成・定着支援",
+    title: "開発・IT",
+    description: "AIコード生成／テスト自動化／ドキュメント生成",
     image: "/images/genre7.jpg",
   },
   {
-    title: "資金調達・補助金",
-    description: "補助金申請／融資支援／助成制度活用",
+    title: "経営企画",
+    description: "AI経営ダッシュボード／市場分析／意思決定支援",
     image: "/images/genre8.jpg",
   },
 ];
@@ -48,11 +48,12 @@ export default function Services() {
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
+          <p className="text-primary-600 font-medium mb-2">AI Solutions</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            支援ジャンル
+            部署別AIソリューション
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            各分野の専門家が、あなたの事業課題に合わせた最適なソリューションを提供します
+            各部署の業務に最適化されたAIソリューションを専門家チームが導入支援します
           </p>
         </div>
 
@@ -71,7 +72,7 @@ export default function Services() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 {/* Title on image */}
                 <div className="absolute bottom-3 left-4 right-4">
                   <h3 className="text-lg font-bold text-white drop-shadow-lg">
