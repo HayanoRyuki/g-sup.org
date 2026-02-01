@@ -1,0 +1,116 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "プライバシーポリシー | Growth Supporters Alliance",
+  description: "Growth Supporters Allianceのプライバシーポリシーについてご説明します。",
+};
+
+export default function PrivacyPolicyPage() {
+  return (
+    <div className="py-16 md:py-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
+          プライバシーポリシー
+        </h1>
+
+        <div className="prose prose-lg max-w-none">
+          <p className="text-gray-600 mb-8">
+            株式会社メディア・コンフィデンス（以下「当社」）は、Growth Supporters
+            Alliance（以下「グロサプ」）のサービスにおける、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。
+          </p>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              第1条（個人情報）
+            </h2>
+            <p className="text-gray-600">
+              「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報及び容貌、指紋、声紋にかかるデータ、及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              第2条（個人情報の収集方法）
+            </h2>
+            <p className="text-gray-600">
+              当社は、ユーザーがサービスを利用する際に、氏名、会社名、メールアドレス、電話番号などの個人情報をお尋ねすることがあります。
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              第3条（個人情報を収集・利用する目的）
+            </h2>
+            <p className="text-gray-600 mb-4">
+              当社が個人情報を収集・利用する目的は、以下のとおりです。
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>当社サービスの提供・運営のため</li>
+              <li>ユーザーからのお問い合わせに回答するため</li>
+              <li>ユーザーに有益と思われる情報の提供のため</li>
+              <li>メンテナンス、重要なお知らせなど必要に応じたご連絡のため</li>
+              <li>利用規約に違反したユーザーの特定及びご利用をお断りするため</li>
+              <li>上記の利用目的に付随する目的</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              第4条（利用目的の変更）
+            </h2>
+            <p className="text-gray-600">
+              当社は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。利用目的の変更を行った場合には、変更後の目的について、当社所定の方法により、ユーザーに通知し、または本ウェブサイト上に公表するものとします。
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              第5条（個人情報の第三者提供）
+            </h2>
+            <p className="text-gray-600 mb-4">
+              当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます。
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>人の生命、身体または財産の保護のために必要がある場合</li>
+              <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合</li>
+              <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              第6条（個人情報の開示）
+            </h2>
+            <p className="text-gray-600">
+              当社は、本人から個人情報の開示を求められたときは、本人に対し、遅滞なくこれを開示します。ただし、開示することにより次のいずれかに該当する場合は、その全部または一部を開示しないこともあり、開示しない決定をした場合には、その旨を遅滞なく通知します。
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              第7条（プライバシーポリシーの変更）
+            </h2>
+            <p className="text-gray-600">
+              本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、ユーザーに通知することなく、変更することができるものとします。当社が別途定める場合を除いて、変更後のプライバシーポリシーは、本ウェブサイトに掲載したときから効力を生じるものとします。
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              第8条（お問い合わせ窓口）
+            </h2>
+            <p className="text-gray-600">
+              本ポリシーに関するお問い合わせは、お問い合わせフォームよりご連絡ください。
+            </p>
+          </section>
+
+          <p className="text-gray-500 text-sm mt-12">
+            制定日：2025年1月1日
+            <br />
+            最終改定日：2025年1月1日
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
