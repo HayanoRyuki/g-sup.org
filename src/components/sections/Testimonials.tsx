@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const testimonials = [
   {
     quote: "AIチャットボット導入で問い合わせ対応が80%削減できた",
@@ -22,18 +26,34 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section className="py-12 bg-gradient-to-r from-primary-600 to-primary-700">
+    <section className="py-12 bg-gradient-to-r from-primary-600 to-primary-700 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              className={`
+                bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20
+                transform transition-all duration-500 ease-out
+                hover:-translate-y-2 hover:bg-white/20 hover:shadow-xl
+                ${isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+                }
+              `}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Quote icon */}
+              {/* Quote icon with pulse */}
               <svg
-                className="w-8 h-8 text-white/40 mb-3"
+                className="w-8 h-8 text-white/40 mb-3 animate-pulse"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -43,7 +63,7 @@ export default function Testimonials() {
                 {testimonial.quote}
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
                   <svg
                     className="w-5 h-5 text-white"
                     fill="currentColor"
