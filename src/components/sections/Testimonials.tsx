@@ -1,104 +1,66 @@
-"use client";
-
-import { useState } from "react";
-
 const testimonials = [
   {
-    quote: "営業が属人化していたが仕組み化できた",
-    company: "BtoB SaaS",
-    role: "Aさん",
+    quote: "AIチャットボット導入で問い合わせ対応が80%削減できた",
+    company: "IT企業",
+    role: "代表取締役",
   },
   {
-    quote: "プロと繋がって初期戦略が明確に",
-    company: "C社",
-    role: "経営企画",
+    quote: "生成AIで営業資料作成が1/3の時間に短縮",
+    company: "人材会社",
+    role: "営業部長",
   },
   {
-    quote: "チーム全体の理解が深まった",
-    company: "D社",
-    role: "人材責任者",
+    quote: "社内ナレッジをAI化して属人化を解消できた",
+    company: "製造業",
+    role: "DX推進室長",
   },
   {
-    quote: "補助金採択に繋がったのが大きい",
-    company: "E社",
-    role: "CFO",
-  },
-  {
-    quote: "Webマーケの知見が社内に蓄積された",
-    company: "F社",
-    role: "マーケ部長",
+    quote: "AI活用で月40時間の業務効率化を実現",
+    company: "コンサル会社",
+    role: "COO",
   },
 ];
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    );
-  };
-
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-gradient-to-r from-primary-600 to-primary-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative">
-          {/* Testimonial Cards */}
-          <div className="overflow-hidden">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {testimonials.map((testimonial, index) => (
             <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * (100 / 4)}%)`,
-              }}
+              key={index}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-2"
-                >
-                  <div className="bg-gray-50 rounded-xl p-6 h-full">
-                    <p className="text-gray-800 font-medium mb-4">
-                      「{testimonial.quote}」
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5 text-primary-600"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-600">
-                          {testimonial.company} {testimonial.role}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+              {/* Quote icon */}
+              <svg
+                className="w-8 h-8 text-white/40 mb-3"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <p className="text-white font-medium mb-4 leading-relaxed">
+                {testimonial.quote}
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <svg
+                    className="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
                 </div>
-              ))}
+                <div>
+                  <p className="text-white/90 text-sm font-medium">
+                    {testimonial.company}
+                  </p>
+                  <p className="text-white/60 text-xs">{testimonial.role}</p>
+                </div>
+              </div>
             </div>
-          </div>
-
-          {/* Navigation Dots */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? "bg-primary-600" : "bg-gray-300"
-                }`}
-                aria-label={`スライド ${index + 1}`}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
