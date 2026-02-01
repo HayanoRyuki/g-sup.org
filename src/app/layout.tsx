@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "グロサプ【Growth Supporters Alliance】",
   description:
-    "スタートアップ・中小企業の"事業成長"を支援する専門家ネットワーク。Webマーケティング、CRM/業務改善、人材・組織設計、資金調達・補助金など、幅広い分野の専門家が支援します。",
+    "スタートアップ・中小企業の「事業成長」を支援する専門家ネットワーク。Webマーケティング、CRM/業務改善、人材・組織設計、資金調達・補助金など、幅広い分野の専門家が支援します。",
   keywords: [
     "スタートアップ支援",
     "中小企業支援",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "グロサプ【Growth Supporters Alliance】",
     description:
-      "スタートアップ・中小企業の"事業成長"を支援する専門家ネットワーク",
+      "スタートアップ・中小企業の「事業成長」を支援する専門家ネットワーク",
     url: "https://g-sup.org",
     siteName: "グロサプ",
     locale: "ja_JP",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "グロサプ【Growth Supporters Alliance】",
     description:
-      "スタートアップ・中小企業の"事業成長"を支援する専門家ネットワーク",
+      "スタートアップ・中小企業の「事業成長」を支援する専門家ネットワーク",
   },
   robots: {
     index: true,

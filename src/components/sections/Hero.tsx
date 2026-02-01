@@ -16,7 +16,7 @@ export default function Hero() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
               スタートアップ・中小企業の
               <br />
-              <span className="text-primary-600">"事業成長"</span>を支援する
+              <span className="text-primary-600">「事業成長」</span>を支援する
               <br />
               専門家ネットワーク
             </h1>
