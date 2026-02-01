@@ -14,7 +14,8 @@ export default function Hero() {
           {/* Text Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              スタートアップ・中小企業の
+              <span className="inline-block">スタートアップ・</span>
+              <span className="inline-block">中小企業の</span>
               <br />
               <span className="text-primary-600">「事業成長」</span>を支援する
               <br />
